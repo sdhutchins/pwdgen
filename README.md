@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.com/sdhutchins/pwdgen.svg?branch=master)](https://travis-ci.com/sdhutchins/pwdgen)
 [![This package is currently under development.](https://img.shields.io/badge/under-development-orange.svg)](https://github.com/sdhutchins/pwdgen)
-[![PyPI version](https://badge.fury.io/py/pwdgen.svg)](https://badge.fury.io/py/pwdgen) 
 
 # pwdgen
 
