@@ -9,7 +9,7 @@ A command-line password generator.
 
 ## Installation
 
-View the below methiods for installing this package.
+View the below methods for installing this package.
 
 ### GitHub
 
