@@ -1,0 +1,14 @@
+# Include the README file
+include README.rst
+
+# Include the requirements file
+include requirements.txt
+
+# Include the setup file
+include setup.py
+
+# Include license
+include LICENSE
+
+# Include tests
+include tests/*
