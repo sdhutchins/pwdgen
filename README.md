@@ -30,7 +30,7 @@ pwdgen directory.
 
 ## Author
 
-yes · [@sdhutchins](https://github.com/sdhutchins)
+Shaurita D. Hutchins · [@sdhutchins](https://github.com/sdhutchins)
     · [sdhutchins@outlook.com](mailto:sdhutchins@outlook.com)
 
 ## Contributing
