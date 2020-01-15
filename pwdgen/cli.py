@@ -14,11 +14,12 @@ def pwdgen_func(length, character=None):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Test')
+    parser = argparse.ArgumentParser(
+        description='pwdgen is a command-line password generator.')
     parser.add_argument(
-        '-l', '--length', help='Define a length for your password.', default=10, type=int)
+        '-l', '--length', help='Define a length for your password', default=10, type=int)
     parser.add_argument(
-        '-c', '--character', help='Select a required character.', default=None)
+        '-c', '--character', help='Select a required character from: !@#*', default=None)
     args = parser.parse_args()
 
     pwd = pwdgen_func(length=args.length, character=args.character)
