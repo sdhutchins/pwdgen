@@ -3,9 +3,13 @@
 
 # pwdgen
 
-A command-line password generator.
+A command-line password generator that allows you to select the length of your password as well as any required character you may want in the password.
+
+This password generator fits most if not all standard password requirements in that it requires both uppercase and lowercase alphabets, numbers, and at least one non-alphanumeric character.
 
 ## Background
+
+It's pretty simple. I was looking for a way to easily generate passwords for myself.
 
 ## Installation
 
@@ -21,6 +25,37 @@ View the below methods for installing this package.
 **OR**
 
 `pip install git+https://github.com/sdhutchins/pwdgen.git`
+
+## Examples
+
+### Generate a Password of 20 characters
+
+```console
+user@host:~$ pwdgen -l 20
+vuvmnWQFf5Wazcl#nRri
+```
+### Generate a Password of 20 characters with an Exclamation
+
+```console
+user@host:~$ pwdgen -l 20 -c !
+EIxfcjGKeuwlqy!lF5zI
+```
+
+### Help Output
+
+```console
+user@host:~$ pwdgen --help
+usage: pwdgen [-h] [-l LENGTH] [-c CHARACTER]
+
+Test
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -l LENGTH, --length LENGTH
+                        Define a length for your password.
+  -c CHARACTER, --character CHARACTER
+                        Select a required character.
+```
 
 ## Tests
 
