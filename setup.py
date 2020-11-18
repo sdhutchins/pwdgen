@@ -13,7 +13,7 @@ from os import path
 import os
 
 # Set the home path of the setup script/package
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 project_path = os.path.dirname(os.path.abspath(__file__))
 project_name = os.path.basename(project_path)
 project_url = 'https://github.com/sdhutchins/pwdgen'
