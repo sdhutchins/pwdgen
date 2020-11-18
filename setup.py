@@ -45,6 +45,9 @@ setup(
     # Packages will be automatically found if not in this list.
     packages=find_packages(exclude=['docs', 'tests']),
     include_package_data=True,
+    install_requires=[
+   'logzero',
+    ],
     entry_points={
         'console_scripts': ['pwdgen=pwdgen.cli:main'],
     },
