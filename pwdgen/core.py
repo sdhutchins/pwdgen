@@ -1,42 +1,47 @@
-# -*- coding: utf-8 -*-
 import secrets
 
-import logzero
-
-
 class PwdGen:
-    """[summary]
+    """
+    A class for generating passwords.
 
-    :raises ValueError: [description]
-    :return: [description]
-    :rtype: [type]
+    Raises:
+        ValueError: If the given character is not one of !@#* or if the character has a length greater than 1.
+
+    Returns:
+        str: The generated password.
     """
 
     def __init__(self, length=10):
-        """[summary]
+        """
+        Initializes the PwdGen object.
 
-        :param length: [description], defaults to 10
-        :type length: int, optional
+        Args:
+            length (int, optional): The length of the password to generate. Defaults to 10.
         """
         self.length = length
 
     def generate_password(self):
-        """[summary]
+        """
+        Generates a password.
 
-        :return: [description]
-        :rtype: [type]
+        Returns:
+            str: The generated password.
         """
         charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#*"
         return "".join([secrets.choice(charset) for _ in range(0, self.length)])
 
     def require_character(self, character):
-        """[summary]
+        """
+        Generates a password that contains the given character.
 
-        :param character: [description]
-        :type character: str
-        :raises ValueError: [description]
-        :return: [description]
-        :rtype: [type]
+        Args:
+            character (str): The character that must be included in the generated password.
+
+        Raises:
+            ValueError: If the given character is not one of !@#* or if the character has a length greater than 1.
+
+        Returns:
+            str: The generated password that contains the given character.
         """
         pwd = self.generate_password()
         iteration = 1
