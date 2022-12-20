@@ -59,8 +59,8 @@ optional arguments:
 
 ## Tests
 
-To run tests, type `nosetests tests/` in the
-pwdgen directory.
+To run tests, type `pytest` in the
+pwdgen directory after installing pytest on your system or in your environment.
 
 ## Author
 
