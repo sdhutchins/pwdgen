@@ -6,7 +6,6 @@ python:
   - "3.8"
   - "3.9"
   - "3.10-dev"
-  - "3.11-dev"
 notifications:
   email: false
 # command to install dependencies

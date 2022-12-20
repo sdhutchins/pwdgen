@@ -52,6 +52,6 @@ setup(
         'console_scripts': ['pwdgen=pwdgen.cli:main'],
     },
     zip_safe=False,
-    test_suite='nose.collector',
-    tests_require=['nose']
+    test_suite='pytest',
+    tests_require=['pytest']
 )
