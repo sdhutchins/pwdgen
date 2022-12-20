@@ -1,6 +1,6 @@
 import pytest
 
-from pwdgen import PwdGen
+from pwdgen.core import PwdGen
 
 @pytest.fixture
 def pwd_gen():

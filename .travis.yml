@@ -10,9 +10,8 @@ notifications:
   email: false
 # command to install dependencies
 install:
-  - "pip install --upgrade pip setuptools wheel"
+  - "pip install --upgrade pip setuptools wheel pytest importlib-metadata"
   - "pip install -r requirements.txt"  
-  - "pip install -U pytest"
   - "pip install ."
 # command to run nosetests
 script: pytest
