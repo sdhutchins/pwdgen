@@ -21,7 +21,7 @@ def test_require_character(pwd_gen):
 
 def test_require_character_invalid_character(pwd_gen):
     with pytest.raises(ValueError) as exc:
-        pwd_gen.require_character("invalid")
+        pwd_gen.require_character("x")
     assert str(exc.value) == "Character should be one of !@#*"
 
 def test_require_character_character_too_long(pwd_gen):
