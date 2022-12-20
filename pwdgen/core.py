@@ -1,5 +1,4 @@
 import secrets
-import logzero
 
 class PwdGen:
     """
