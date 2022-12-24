@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/sdhutchins/pwdgen.svg?branch=master)](https://travis-ci.com/sdhutchins/pwdgen)
+[![Build Status](https://app.travis-ci.com/sdhutchins/pwdgen.svg?branch=master)](https://app.travis-ci.com/sdhutchins/pwdgen)
 [![This package is currently under development.](https://img.shields.io/badge/under-development-orange.svg)](https://github.com/sdhutchins/pwdgen)
 
 # pwdgen
