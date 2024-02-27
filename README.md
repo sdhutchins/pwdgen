@@ -3,23 +3,23 @@
 
 # pwdgen
 
-A command-line password generator that allows you to select the length of your password as well as any required character you may want in the password.
-
-This password generator fits most if not all standard password requirements in that it requires both uppercase and lowercase alphabets, numbers, and at least one non-alphanumeric character.
+A command-line password generator that allows users to customize password length and exclude specific characters. This tool ensures generated passwords include at least one lowercase letter, one uppercase letter, one digit, and one special character, adhering to common password policies.
 
 ## Background
 
-It's pretty simple. I was looking for a way to easily generate passwords for myself.
+The motivation behind `pwdgen` was simple: to develop a convenient method for generating secure, complex passwords. In a digital age where security is paramount, having a tool that can quickly create passwords meeting various security standards is invaluable.
 
 ## Features
 
-**Customizable Length**: Users can specify the exact length of their password, allowing for the creation of passwords that meet or exceed the security requirements of most systems.
+**Customizable Length**: Users can define the exact length of their password, enabling the creation of passwords that meet the security requirements of different systems.
 
-**Required Character Inclusion**: `pwdgen` enables the inclusion of at least one user-specified character from `!@#*`. This feature allows for the generation of passwords that can comply with specific character requirements of various platforms or systems.
+**Excludable Characters**: `pwdgen` allows users to specify characters they wish to exclude from the password, further customizing the password to meet specific user or system requirements.
 
-**Comprehensive Character Set**: By default, `pwdgen` generates passwords that contain a mix of uppercase and lowercase letters, numbers, and at least one non-alphanumeric character (!@#*). This diverse character set ensures compliance with the majority of standard password requirements, promoting strong password practices.
+**Comprehensive Character Set**: By default, `pwdgen` generates passwords that include a balanced mix of uppercase and lowercase letters, numbers, and special characters. This ensures the generation of strong passwords that comply with most password policies.
 
-**Security Focused**: Utilizing a cryptographically secure pseudorandom number generator, `pwdgen` ensures that each password is unique and resistant to guessing or automated attacks.
+**Security Focused**: Leveraging a cryptographically secure pseudorandom number generator, `pwdgen` guarantees the uniqueness and security of each password, minimizing the risk of password-related security breaches.
+
+**Verbose Output**: For users interested in the security details of their generated passwords, `pwdgen` offers a verbose option that includes the password entropy in the output, providing insight into the password's strength.
 
 ## Installation
 
