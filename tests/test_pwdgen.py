@@ -2,29 +2,25 @@ import pytest
 
 from pwdgen.core import PwdGen
 
-@pytest.fixture
-def pwd_gen():
-    return PwdGen()
+def test_length():
+    pwd_gen = PwdGen(12)
+    pwd, _ = pwd_gen.generate_password()
+    assert len(pwd) == 12
 
-def test_pwd_gen_initialization(pwd_gen):
-    assert isinstance(pwd_gen, PwdGen)
-    assert pwd_gen.length == 10
+def test_exclude_chars():
+    exclude = 'abc123'
+    pwd_gen = PwdGen(exclude_chars=exclude)
+    pwd, _ = pwd_gen.generate_password()
+    assert all(c not in exclude for c in pwd)
 
-def test_generate_password(pwd_gen):
-    password = pwd_gen.generate_password()
-    assert isinstance(password, str)
-    assert len(password) == pwd_gen.length
+def test_include_special_chars():
+    pwd_gen = PwdGen()
+    pwd, _ = pwd_gen.generate_password()
+    # Check that at least one of the special characters is included
+    assert any(c in pwd for c in "!@#*")
 
-def test_require_character(pwd_gen):
-    password = pwd_gen.require_character("!")
-    assert "!" in password
-
-def test_require_character_invalid_character(pwd_gen):
-    with pytest.raises(ValueError) as exc:
-        pwd_gen.require_character("x")
-    assert str(exc.value) == "Character should be one of !@#*"
-
-def test_require_character_character_too_long(pwd_gen):
-    with pytest.raises(ValueError) as exc:
-        pwd_gen.require_character("invalidcharacter")
-    assert str(exc.value) == "Character should be length of 1."
+def test_entropy():
+    pwd_gen = PwdGen()
+    _, entropy = pwd_gen.generate_password()
+    assert isinstance(entropy, float)
+    # Additional entropy value checks could be added based on expected results
