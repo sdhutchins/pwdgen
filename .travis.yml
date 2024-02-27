@@ -9,6 +9,7 @@ notifications:
 # command to install dependencies
 install:
   - "pip install --upgrade pip setuptools wheel pytest importlib-metadata codecov pytest-cov"
+  - "pip install urllib3==1.26.6"
   - "pip install -r requirements.txt"  
   - "pip install ."
 # command to run pytests
