@@ -41,24 +41,22 @@ View the below methods for installing this package.
 ### Generate a Password of 20 characters with an Exclamation
 
 ```console
-user@host:~$ pwdgen -l 20 -c !
-EIxfcjGKeuwlqy!lF5zI
+user@host:~$ pwdgen -l 20
+Generated Password: GKcvUCIen2mJTeqE@v!G
 ```
 
 ### Help Output
 
 ```console
 user@host:~$ pwdgen --help
-usage: pwdgen [-h] [-l LENGTH] [-c CHARACTER] [-e EXCLUDE] [-v]
+usage: pwdgen [-h] [-l LENGTH] [-e EXCLUDE] [-v]
 
-pwdgen is a command-line password generator.
+pwdgen is a command-line password generator that ensures each password includes at least one lowercase letter, one uppercase letter, one digit, and one special character.
 
 options:
   -h, --help            show this help message and exit
   -l LENGTH, --length LENGTH
-                        Define a length for your password
-  -c CHARACTER, --character CHARACTER
-                        Select a required character from: !@#*
+                        Define the length for your password (minimum 4)
   -e EXCLUDE, --exclude EXCLUDE
                         Characters to exclude from the password
   -v, --verbose         Display verbose output, including password entropy
