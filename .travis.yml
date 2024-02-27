@@ -8,8 +8,10 @@ notifications:
   email: false
 # command to install dependencies
 install:
-  - "pip install --upgrade pip setuptools wheel pytest importlib-metadata"
+  - "pip install --upgrade pip setuptools wheel pytest importlib-metadata codecov pytest-cov"
   - "pip install -r requirements.txt"  
   - "pip install ."
-# command to run nosetests
-script: pytest
+# command to run pytests
+script: pytest --cov-report term tests/
+# generate code coverage results
+after_success: codecov
