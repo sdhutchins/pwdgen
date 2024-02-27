@@ -11,16 +11,26 @@ This password generator fits most if not all standard password requirements in t
 
 It's pretty simple. I was looking for a way to easily generate passwords for myself.
 
+## Features
+
+**Customizable Length**: Users can specify the exact length of their password, allowing for the creation of passwords that meet or exceed the security requirements of most systems.
+
+**Required Character Inclusion**: `pwdgen` enables the inclusion of at least one user-specified character from `!@#*`. This feature allows for the generation of passwords that can comply with specific character requirements of various platforms or systems.
+
+**Comprehensive Character Set**: By default, `pwdgen` generates passwords that contain a mix of uppercase and lowercase letters, numbers, and at least one non-alphanumeric character (!@#*). This diverse character set ensures compliance with the majority of standard password requirements, promoting strong password practices.
+
+**Security Focused**: Utilizing a cryptographically secure pseudorandom number generator, `pwdgen` ensures that each password is unique and resistant to guessing or automated attacks.
+
 ## Installation
 
 View the below methods for installing this package.
 
 ### GitHub
 
-1.  Download the zip file and unzip it or `git clone
+1. Download the zip file and unzip it or `git clone
     https://github.com/sdhutchins/pwdgen.git`
-2.  `cd pwdgen`
-3.  `pip install .`
+2. `cd pwdgen`
+3. `pip install .`
 
 **OR**
 
@@ -28,12 +38,6 @@ View the below methods for installing this package.
 
 ## Examples
 
-### Generate a Password of 20 characters
-
-```console
-user@host:~$ pwdgen -l 20
-vuvmnWQFf5Wazcl#nRri
-```
 ### Generate a Password of 20 characters with an Exclamation
 
 ```console
@@ -45,16 +49,19 @@ EIxfcjGKeuwlqy!lF5zI
 
 ```console
 user@host:~$ pwdgen --help
-usage: pwdgen [-h] [-l LENGTH] [-c CHARACTER]
+usage: pwdgen [-h] [-l LENGTH] [-c CHARACTER] [-e EXCLUDE] [-v]
 
-Test
+pwdgen is a command-line password generator.
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -l LENGTH, --length LENGTH
-                        Define a length for your password.
+                        Define a length for your password
   -c CHARACTER, --character CHARACTER
-                        Select a required character.
+                        Select a required character from: !@#*
+  -e EXCLUDE, --exclude EXCLUDE
+                        Characters to exclude from the password
+  -v, --verbose         Display verbose output, including password entropy
 ```
 
 ## Tests
