@@ -4,7 +4,6 @@ cache: pip
 python:
   - "3.8"
   - "3.9"
-  - "3.11"
 notifications:
   email: false
 # command to install dependencies
