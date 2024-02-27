@@ -13,7 +13,7 @@ from os import path
 import os
 
 # Set the home path of the setup script/package
-__version__ = '0.0.2'
+__version__ = '0.1'
 project_path = os.path.dirname(os.path.abspath(__file__))
 project_name = os.path.basename(project_path)
 project_url = 'https://github.com/sdhutchins/pwdgen'
@@ -29,7 +29,7 @@ def readme():
 setup(
     name=project_name,
     author='Shaurita D. Hutchins',
-    author_email='sdhutchins@outlook.com',
+    author_email='shaurita.d.hutchins@gmail.com',
     description="A command-line password generator.",
     version=__version__,
     long_description=readme(),
@@ -37,7 +37,6 @@ setup(
     license='MIT',
     keywords='password generator cli',
     classifiers=[
-        'Development Status :: 3 - Alpha',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
         'Framework :: Cookiecutter'
