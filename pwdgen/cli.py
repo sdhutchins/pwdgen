@@ -18,9 +18,9 @@ def generator(length, exclude_chars='', verbose=False):
     try:
         pwd, entropy = pwdgen.generate_password()
         if verbose:
-            logzero.logger.info(f"Generated Password: {pwd}\nEntropy: {entropy} bits")
+            print(f"Generated Password: {pwd}\nEntropy: {entropy} bits")
         else:
-            logzero.logger.info(pwd)
+            print(f"Generated Password: {pwd}")
     except ValueError as e:
         logzero.logger.error(e)
 
