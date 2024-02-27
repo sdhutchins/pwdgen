@@ -23,14 +23,12 @@ def generator(length, required_character=None, exclude_chars='', verbose=False):
 
     pwdgen = PwdGen(length=length, exclude_chars=exclude_chars)
     try:
-        pwd, entropy = pwdgen.generate_password(include_chars=required_character)
+        pwd, entropy = pwdgen.generate_password()
         if verbose:
             print(f"Generated Password: {pwd}\nEntropy: {entropy} bits")
         else:
             print(pwd)
-    except ValueError as e:
-        logzero.logger.error(e)
-    except TypeError:
+    except (ValueError, TypeError) as e:
         logzero.logger.error(e)
 
 def main():
